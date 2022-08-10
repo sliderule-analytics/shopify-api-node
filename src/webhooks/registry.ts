@@ -257,10 +257,7 @@ const WebhooksRegistry: RegistryInterface = {
 
     validateDeliveryMethod(deliveryMethod);
     const client = new GraphqlClient(shop, accessToken);
-    const address =
-      deliveryMethod === DeliveryMethod.Http
-        ? `${Context.HOST_SCHEME}://${Context.HOST_NAME}${path}`
-        : path;
+    const address = path;
 
     let checkResult;
     try {
